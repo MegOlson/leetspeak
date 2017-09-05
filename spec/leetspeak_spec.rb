@@ -2,14 +2,13 @@ require('rspec')
 require('leetspeak')
 
 describe('#leetspeak') do
-  # it("returns inputted string with no leetspeak rules applied") do
-  # expect(("watermelon").title_case()).to(eq("watermelon"))
+  it("returns inputted string with no leetspeak rules applied") do
+  expect(("happy").leetspeak()).to(eq("happy"))
+ end
+  it("replaces the letter 'e' with '3'") do
+    expect(("watermelon").leetspeak()).to(eq("wat3rm3lon"))
+ end
 
-
-#   it("replaces the letter 'e' with the integer 3") do
-#     expect(("watermelon").title_case()).to(eq("wat3rm3lon"))
-# end
-#
 #   it("replaces the letter 'o' with the integer 0") do
 #     expect(("watermelon").title_case()).to(eq("wat3rm3l0n"))
 # end
@@ -26,5 +25,5 @@ describe('#leetspeak') do
 #         end
 #       end
 #     end
-#   end
+  # end
 end
