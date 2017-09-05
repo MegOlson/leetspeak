@@ -6,24 +6,22 @@ describe('#leetspeak') do
   expect(("happy").leetspeak()).to(eq("happy"))
  end
   it("replaces the letter 'e' with '3'") do
-    expect(("watermelon").leetspeak()).to(eq("wat3rm3lon"))
+    expect(("water").leetspeak()).to(eq("wat3r"))
  end
 
-#   it("replaces the letter 'o' with the integer 0") do
-#     expect(("watermelon").title_case()).to(eq("wat3rm3l0n"))
-# end
-#
-#   it("replaces capital 'I' with the integer 1") do
-#     expect(("imagination").title_case()).to(eq("1magination"))
-# end
-#
-# it("replace letter "s"
-#   with the letter "z", unless letter "s" is the first letter of the word.") do
-#   expect(("Susan").title_case()).to(eq("Suzan"))
-# end
-#
-#         end
-#       end
-#     end
-  # end
+   it("replaces the letter 'o' with the integer 0") do
+      expect(("igloo").leetspeak()).to(eq("igl00"))
+  end
+
+    it("replaces capital 'I' with the integer 1") do
+      expect(("Imagination").leetspeak()).to(eq("1maginati0n"))
+  end
+
+  it("replace letter 's' with the letter 'z'") do
+    expect(("susan").leetspeak()).to(eq("zuzan"))
+  end
+
+  it("Do not replace the letter 'S' when starting a word") do
+    expect(("Susan").leetspeak()).to(eq("Suzan"))
+  end
 end
